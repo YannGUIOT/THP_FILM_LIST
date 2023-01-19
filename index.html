@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Film Finder</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class='wrapper'>
+
+    <header>
+      <h1>The FILM Finder</h1>
+    </header>
+
+    <section class='finder'>
+      <h3>Search Film :</h3>
+      <form action="#" onsubmit='return resultFilm()'>
+        <input type="text" name="search" id="search" placeholder="Your research">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section class='all-result'></section>
+
+    <section class='modal-section'></section>
+
+    <footer>
+      <p>THP EXERCICE @ 2023</p>
+    </footer>
+  </div>
+  <!-- JS -->
+  <script src="api_key.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

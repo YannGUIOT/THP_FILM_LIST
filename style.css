@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+  color: #454545;
+}
+
+html{
+  min-height: 100vh;
+  position: relative;
+}
+
+body{
+  margin: 0 0;
+  scroll-behavior: smooth;
+}
+
+.not-visible{
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.wrapper{
+  margin:0 10%;
+}
+
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background-color: rgb(139, 35, 35);;
+}
+
+footer p{
+  margin:10px 50px;
+  color: whitesmoke;
+  font-size: small;
+}
+
+/****** Header ******/
+header{
+  padding-bottom: 50px;
+}
+
+header h1{
+  font-size: 3rem;
+  color: rgb(139, 35, 35);
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/****** Section Finder ******/
+
+section h3{
+  color: brown;
+  margin: 0;
+}
+
+form
+{
+  margin-top: 10px;
+}
+
+/* Input */
+.finder input{
+  color: rgb(139, 35, 35);
+  display: block;
+  width:50%;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  transition:400ms;
+  box-shadow: inset 1px 1px 2px 1px rgba(165, 42, 42, 0.21);
+}
+
+.finder input::placeholder{
+  color: rgba(165, 42, 42, 0.274) ;
+}
+
+.finder input:hover{
+  background-color: rgba(165, 42, 42, 0.02) ;
+}
+
+.finder input:focus{
+  background-color: rgba(165, 42, 42, 0.02);
+}
+
+/* Button */
+button{
+  color: whitesmoke;
+  border-radius: 50px;
+  border: 1px solid brown;
+  background-color: brown;
+  padding: 10px 30px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+button:hover{
+  color: brown;
+  background-color: rgba(165, 42, 42, 0.02);
+}
+
+/****** Section Result ******/
+.all-result{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  margin-top: 50px;
+}
+
+/* blok film */
+.film{
+  width:80%;
+  min-height: 200px;
+  border-bottom  : 2px solid rgba(165, 42, 42, 0.22);
+  border-right  : 2px solid rgba(165, 42, 42, 0.22);
+  border-radius: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  transition: 1s;
+  overflow: hidden;
+}
+
+/* film image */
+.film-img{
+  position: relative;
+  height: 100%;
+  max-width: 300px;
+}
+
+.more{
+  position: absolute;
+  color: whitesmoke;
+  background-color: rgba(165, 42, 42, 0.425);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: 1s ease-in-out;
+  cursor:pointer;
+}
+
+.more p {
+  color: whitesmoke;
+  display: block;
+  margin-top: 50%;
+  font-size: 1.2rem;
+}
+
+.more:hover{
+  opacity: 1;
+}
+
+.film-img img{
+  width: 150px;
+  vertical-align: bottom;
+}
+
+/* Film text */
+.film-text{
+  margin:0  100px;
+}
+
+.film-text h2{
+  color: rgb(139, 35, 35);
+}
+
+.film-text h4{
+  color: #45454591
+}
+
+/****** Section Modal ******/
+
+/* The Modal */
+.modal {
+  background-color: rgba(0, 0, 0, 0.392);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  animation-name: fadeIn;
+  animation-duration: 1s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 1s;
+  animation-name: slideIn;
+  animation-duration: 1s
+}
+
+/* The Close cross */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: rgb(139, 35, 35);
+  color: white;
+}
+
+.modal-header h2{
+  color: whitesmoke;
+}
+
+.modal-body {
+  display: flex;
+  flex-flow: row;  
+}
+
+.modal-img{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 400px;
+}
+
+.modal-img img{
+  vertical-align: bottom
+}
+
+.modal-text{
+  margin:30px
+}
+
+/* Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+} 
